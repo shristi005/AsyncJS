@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./images/table.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 200px;
+    height: 280px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+}
+
+.button-style {
+    background-color: #F3C307;
+    border: none;
+    text-align: center;
+    padding: 6px 18px;
+    cursor: pointer;
+}
+
+#new-deck {
+    font-size: 1.2rem;
+    width: 150px;
+    align-self: flex-start;
+}
+
+#card-Drawn {
+    padding: 15px;
+    margin: 25px;
+}
+
+#draw {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    font-size: 25px;
+
+}

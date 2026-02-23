@@ -11,7 +11,7 @@ function handleClick() {
         })
 }
 
-document.getElementById("getCardBtn").addEventListener("click", handleClick)
+document.getElementById("new-deck").addEventListener("click", handleClick)
 // https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2     -- this is the url that we make use to get 2 cards from the deck we got
 
 function drawCards() {
@@ -20,14 +20,13 @@ function drawCards() {
         .then(data => {
             console.log(data)
 
-            //make sure of using two template strings
-            document.getElementById("card-Drawn").innerHTML = data.cards.map(card => `<img src="${card.image}" alt=${`card with value ${card.value} and ${card.suit}`}>`).join()
+            // //make sure of using two template strings
+            // document.getElementById("card-Drawn").innerHTML = data.cards.map(card => `<img src="${card.image}" alt=${`card with value ${card.value} and ${card.suit}`}>`).join()
 
             //The above method is good but to simplify sice its known that only 2 cards are drawn:
-            // document.getElementById("cards").innerHTML = `
-            //     <img src=${data.cards[0].image} />
-            //     <img src=${data.cards[1].image} />
-            // `
+            document.getElementById("card-Drawn").children[0].innerHTML = `<img src=${data.cards[0].image} class="card-img" />`
+            document.getElementById("card-Drawn").children[1].innerHTML = `<img src=${data.cards[0].image} class="card-img"/>`
+
 
 
         })
