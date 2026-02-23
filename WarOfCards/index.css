@@ -11,12 +11,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+}
+
+#top {
+    display: flex;
+    align-self: flex-start;
+}
+
+#remaining {
+    margin: 0;
+    margin-left: 15px;
 }
 
 .card {
-    width: 200px;
-    height: 280px;
-    margin-bottom: 20px;
+    width: 140px;
+    height: 196px;
+    margin-bottom: 50px;
     border: 2px solid black;
     border-radius: 12px;
 }
@@ -30,19 +41,20 @@ body {
     background-color: #F3C307;
     border: none;
     text-align: center;
-    padding: 6px 18px;
+    padding: 6px 12px;
     cursor: pointer;
 }
 
 #new-deck {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     width: 150px;
+    margin-bottom: 10px;
     align-self: flex-start;
 }
 
 #card-Drawn {
     padding: 15px;
-    margin: 25px;
+    margin-top: 20px;
 }
 
 #draw {
@@ -50,7 +62,11 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 45px;
+    height: 40px;
     font-size: 25px;
+}
 
+button:disabled {
+    background-color: rgb(163, 161, 161);
+    cursor: not-allowed;
 }
